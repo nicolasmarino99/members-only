@@ -1,0 +1,11 @@
+@import "../_mixins.scss";
+
+  .debug_dump {
+    clear: both;
+    float: left;
+    margin-left: 15em;
+    margin-top: 45px;
+    background-color: lightgrey;
+    color: black;
+    @include box_sizing;
+  }

@@ -1,0 +1,32 @@
+@import "../_variables.scss";
+@import "../_mixins.scss";
+
+.form-container {
+    .big-title {
+        text-align: center;
+        margin-top: 2%;
+    }
+    .form {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            font-family: $font;
+            padding: 4em 0;
+            background-image: linear-gradient(180deg, rgba(2,0,36,1) 27%, rgba(65,88,185,1) 60%, rgba(38,38,113,1) 98%);
+            input {
+                width: 90%;
+                height: 2em;
+                margin: 1em 0;
+            }
+            .button {
+                width: 10em;
+                background-image: linear-gradient(180deg, rgba(255,147,19,1) 0%, rgba(38,38,113,1) 98%);
+            }
+        }
+    }
+}

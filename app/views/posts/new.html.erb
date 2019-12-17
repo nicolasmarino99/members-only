@@ -1,0 +1,16 @@
+<div class="form-container">
+    <h1 class="big-title">Create a new post</h1>
+        <div class="form">
+            <%= form_for @post do |f| %>
+                <%= render 'shared/posts_error_messages' %>
+                
+                <%= f.label :title %>
+                <%= f.text_field :title %>
+
+                <%= f.label :content %>
+                <%= f.text_area :content, size: "40x15" %>
+
+                <%= f.submit "Create post", class: "button" %>
+            <% end %>
+        </div>
+</div>

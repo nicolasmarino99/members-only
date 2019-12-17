@@ -1,0 +1,17 @@
+<div id="gravatar-user">
+    <h1>
+        <%= gravatar_for(@user, size: 100) %><br>
+        <%= @user.name %>
+    </h1>
+    <div id="btm-container">
+        <%= link_to new_post_path do %>
+            <div class="button" id="first-btm">Create a new post</div>
+        <% end %>
+        <%= link_to posts_path do %>
+            <div class="button">See all posts</div>
+        <% end %>
+        <%= link_to users_path do %>
+            <div class="button">See all users</div>
+        <% end %>
+    </div>
+</div>

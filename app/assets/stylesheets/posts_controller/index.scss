@@ -1,0 +1,36 @@
+@import "../_variables.scss";
+
+.posts {
+    width: 30%;
+    li {
+        align-items: center;
+       .post-details {
+           display: flex;
+           flex-direction: column;
+           font-size: 18px;
+           font-family: $font;
+           #post-title {
+               font-size: 30px;
+               font-weight: bold;
+           }
+           #post-content {
+               font-size: 18px;
+           }
+       }
+       .author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #author-name {
+                font-size: 20px;
+                font-weight: bold;
+                font-family: $font;
+            }
+        }
+    }   
+}
+
+#btm-post {
+    width: 100%;
+    padding: 1em 2em;
+}

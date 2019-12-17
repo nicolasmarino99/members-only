@@ -1,0 +1,24 @@
+<div class="home-content">
+ <% if logged_in? %>
+ <h1 class="big-title">Welcome <%= current_user.name.capitalize %> to Members Only blog</h1>
+    <%= link_to new_post_path do %>
+        <div class="button">Create a new post</div>
+    <% end %>
+    <%= link_to posts_path do %>
+        <div class="button">See all posts</div>
+    <% end %>
+    <%= link_to users_path do %>
+        <div class="button">See all users</div>
+    <% end %>
+       
+
+<% else %>
+ 
+    <h1 class="big-title">Welcome to Members Only blog</h1>
+    <%= link_to "Sign up", new_user_path, class: "button" %>
+    <p>
+        This is an exclusive blog, when members can post their thoughts.<br>
+        Anyone can read it, but just the members will know who wrote it.
+    </p>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+@import "../_variables.scss";
+@import "../_mixins.scss";
+
+.home-content {
+    display: grid;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family: $font;
+    p {
+        font-size: 18px;
+        font-weight: lighter;
+        line-height: 1.5em;
+    }
+    .button {
+        width: 20%;
+        margin: 1em 0;
+    }
+}

@@ -1,0 +1,23 @@
+<div class=list-container>
+    <h1 class="big-title">Posts</h1>
+    
+    <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
+   
+    <ul class=posts>
+        <% @posts.each do |post| %>
+            <%= render post %>
+        <% end %>
+    </ul>
+
+        <% if logged_in? %>
+            <%= link_to new_post_path do %>
+                <div class="button" id="btm-post">Create a new post</div>
+            <% end %>
+        <% end %>
+
+        <% if !logged_in? %>
+            <p> Do you want to see the authors name of this posts? Please sign in <%=link_to "here", sessions_new_path %>.</p>
+        <% end %>
+    
+    <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
+</div>

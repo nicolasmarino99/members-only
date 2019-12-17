@@ -7,9 +7,56 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <script src="/all.min.js"></script> 
   </head>
 
   <body>
+    <nav class="navbar">
+      <div id="logo"><%= link_to "Members Only", root_path %></div>
+      
+      
+      <% if logged_in? %>        
+        <div class="ui compact menu hover-div">
+          <div class="ui simple dropdown item">
+            <i id="pink-icon" class="icon fas fa-user"></i>
+            <p>Account</p>
+            <div class="menu">
+              <div class="item"><%= link_to "Profile", current_user %></div>
+              <div class="item"><%= link_to "Settings", edit_user_path(current_user) %></div>
+              <div class="item"><%= link_to "Log out", sessions_destroy_path, method: :delete %></div>
+            </div>
+          </div>
+        </div>    
+        
+        
+        <div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i><%= link_to "Posts", posts_path %></div>
+        <div class="hover-div"><i id="red-icon" class="icon fas fa-code"></i><%= link_to "Snippets", static_pages_snippets_path %></div>
+        <div class="hover-div"><i id="purple-icon" class="icon fas fa-envelope-open-text"></i><%= link_to "Newsletter", static_pages_newsletter_path %></div>
+        <div class="hover-div"><i id="blue-icon" class="icon fas fa-briefcase"></i><%= link_to "Jobs", static_pages_jobs_path %></div>
+        <div class="hover-div"><i id="green-icon" class="icon fas fa-play-circle"></i><%= link_to "Videos", static_pages_videos_path %></div>
+        <div class="hover-div"><i id="yellow-icon" class="icon fas fa-users"></i><%= link_to "All Users", users_path  %></div>
+
+      <% else %>
+        <div class="hover-div"><i id="pink-icon" class="icon fas fa-door-open"></i><%= link_to "Login", sessions_new_path %></div>
+        <div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i><%= link_to "Posts", posts_path %></div>
+        <div class="hover-div"><i id="red-icon" class="icon fas fa-code"></i><%= link_to "Snippets", static_pages_snippets_path %></div>
+        <div class="hover-div"><i id="purple-icon" class="icon fas fa-envelope-open-text"></i><%= link_to "Newsletter", static_pages_newsletter_path %></div>
+        <div class="hover-div"><i id="blue-icon" class="icon fas fa-briefcase"></i><%= link_to "Jobs", static_pages_jobs_path %></div>
+        <div class="hover-div"><i id="green-icon" class="icon fas fa-play-circle"></i><%= link_to "Videos", static_pages_videos_path %></div>
+        <div class="hover-div"><i id="yellow-icon" class="icon fas fa-users"></i><%= link_to "All Users", users_path  %></div>
+      <% end %>
+      
+      <div id="search-box">
+          <input id="searchbar"type="search" placeholder="e.g my first post">
+          <input id="search" type="button" >
+          <i class="fas fa-search" id="speciali"></i>
+      </div>
+    </nav>
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

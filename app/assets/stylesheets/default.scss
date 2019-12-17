@@ -1,0 +1,92 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/*    Buttons      */
+.button {
+    @include button-style;
+    display: flex;
+    width: 8em;
+    height: 2.5em;
+    border-radius: 0 30px 30px 0;
+    border: 0px;
+    font-weight: bold;
+    margin: 2em 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;   
+}
+
+/*    Titles      */
+.big-title {
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    font-family: $font;
+    &:hover {
+        background: -webkit-linear-gradient(90deg,#ff8a00,#e52e71);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.medium-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-family: $font;
+    &:hover {
+        background: -webkit-linear-gradient(90deg,#ff8a00,#e52e71);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+/*    Debug errors      */
+#error_explanation {
+    width: 90%;
+}
+
+.red-background {
+    background-color: rgba(161, 1, 1, 0.493);
+    height: 2em;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.error-list {
+    color: rgba(204, 3, 3, 0.815);
+    margin: 1em;
+}
+
+.alert-danger {
+    display: flex;
+    background-color: rgba(133, 0, 0, 0.459);
+    color: rgb(247, 149, 149);
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    
+    margin: auto;
+    margin-top: 2em;
+    width: 50%;
+    height: 4em;
+}
+.alert-success {
+    display: flex;
+    background-color: rgba(6, 189, 0, 0.459);
+    color: rgb(119, 253, 114);
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    
+    margin: auto;
+    margin-top: 2em;
+    width: 50%;
+    height: 4em;
+}

@@ -1,0 +1,22 @@
+<div class="form-container">
+    <h1 class="big-title">Sign up</h1>
+    <div class="form">
+        <%= form_for @user do |f| %>
+            <%= render 'shared/users_error_messages' %>
+
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+
+            <%= f.label :password_confirmation, "Password confirmation" %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+            <%= f.submit "Create my account", class: "button" %>
+        <% end %>
+    </div>
+</div>

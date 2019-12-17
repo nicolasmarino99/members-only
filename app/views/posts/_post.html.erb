@@ -1,0 +1,15 @@
+<li>
+    <% if logged_in? %>
+        <div class="author">
+            <p><%= gravatar_for post.user, size: 70 %></p>
+            <p id="author-name"><%= post.user.name %></p>
+        </div>
+    <% end %>
+    <div class="post-details">
+        <p id="post-title"><%= post.title %></p>
+        <p id="post-content"><%= post.content %></p>
+    </div>
+</li>
+
+
+

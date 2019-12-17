@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/doabit/semantic-ui-sass.git
+  revision: 97fc26081d91213370cde9223db69049bbe69e7d
+  specs:
+    semantic-ui-sass (2.4.2.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,9 +65,15 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (9.7.3)
+      execjs
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.29.0)
@@ -75,6 +88,9 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     erubi (1.9.0)
+    execjs (2.7.0)
+    faker (2.7.0)
+      i18n (>= 1.6, < 1.8)
     ffi (1.11.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -102,8 +118,9 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
+    pg (1.1.4)
     public_suffix (4.0.1)
-    puma (4.3.0)
+    puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.0.7)
     rack-proxy (0.6.5)
@@ -143,6 +160,11 @@ GEM
     regexp_parser (1.6.0)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1)
@@ -192,6 +214,9 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    will_paginate (3.2.1)
+    will_paginate_semantic_ui (2.1.0)
+      will_paginate (> 3.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.2.2)
@@ -200,23 +225,30 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
+  bootstrap-sass
   byebug
   capybara (>= 2.15)
+  faker
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 4.1)
+  pg
+  puma (~> 4.3)
   rails (~> 6.0.1)
   sass-rails (>= 6)
   selenium-webdriver
+  semantic-ui-sass!
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
+  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
+  will_paginate
+  will_paginate_semantic_ui
 
 RUBY VERSION
    ruby 2.6.3p62

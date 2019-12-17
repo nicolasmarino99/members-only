@@ -1,0 +1,33 @@
+<div class="form-container">
+    <h1 class="big-title">Setting</h1>
+    <h1 class="medium-title">Edit your account</h1>
+    <div class="form">
+    
+           
+        <%= form_for @user do |f| %>
+
+
+            <%= render 'shared/users_error_messages' %>
+
+            <div class="gravatar_edit">
+                <%= gravatar_for @user %>
+                <a href="http://gravatar.com/emails" target="_blank">change</a>
+            </div>
+
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+
+            <%= f.label :password_confirmation, "Password confirmation" %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+            <%= f.submit "save changes", class: "button" %>
+        <% end %>
+    </div>
+</div>
+
